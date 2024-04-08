@@ -13,19 +13,13 @@ public class MinimumRemovetoMakeValidParentheses {
         for(int i = 0; i < s.length(); i++) {
         	if(input[i] == ')' && stack.isEmpty()) {
         		set.add(i);
-        		System.out.println("this is " + input[i] + "  loop 1");
         		
         	}
         	else if(input[i] == ')') {
         		stack.poll();
-        		System.out.println("this is " + input[i] + "  loop 2");
         	}
         	else if(input[i] == '(') {
         		stack.add(i);
-        		System.out.println("this is " + input[i] + "  loop 3");
-        	}else 
-        	{
-        		System.out.println("this is " + input[i] + "  loop 4");
         	}
         }
         for(int i : stack) {
