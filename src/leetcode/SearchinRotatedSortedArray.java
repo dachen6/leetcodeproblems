@@ -7,9 +7,11 @@ public class SearchinRotatedSortedArray {
 	 	
 	 	while(left <= right) {
 	 		int mid = left + (right - left)/2;
+	 		System.out.print( "current number"+nums[mid]);
 	 		if(nums[mid] == target) {
 	 			return mid;
 	 		}
+	
 	 		else if( nums[left] < nums[mid] && nums[left] <= target && target < nums[mid] || nums[left] > nums[mid]  && nums[left] <= target ) {
 	 			right = mid-1;
 
